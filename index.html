@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Graficas</title>
+</head>
+
+<body>
+
+    <div class="contain-all">
+
+        <div class="container-main">
+
+
+            <div>
+
+                <div> <!--Quiero que se vea un contenedor a lado de la otra-->
+
+                    <div class="group">
+                        <p>Elija una opción</p>
+                        <select id="select-option">
+                            <option value="Array">Array</option>
+                            <option value="LinkedList">LinkedList</option>
+                        </select>
+                    </div>
+                    <p id="eleccion">Operaciones con Array</p>
+
+                    <div class="group">
+                        <label>Inserción</label>
+                        <button id="insert-button">Llenar</button>
+                    </div>
+                    <div class="group">
+
+                        <label>Búsqueda</label>
+                        <input id="search-input" type="search" placeholder="name">
+                    </div>
+
+
+                    <h3>Resultados de Operaciones</h3>
+                    <table id="results-table" border="1">
+                        <thead>
+                            <tr>
+                                <th>Operación</th>
+                                <th>Descripción</th>
+                                <th>Tiempo (ms)</th>
+                                <th>Iteraciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                        </tbody>
+                    </table>
+                    <div class="group">
+                        <label>Algoritmo de ordenamiento</label>
+                        <select id="sort-option">
+                            <option value="Bouble sort">Bouble sort</option>
+                            <option value="Merge sort">Merge sort</option>
+                            <option value="Radix sort">Radix sort</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div id="results">
+                    <p>Resultados de la busqueda</p>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="before-sort" class="group">
+                <label>Datos originales</label>
+                <p>Los datos originales se mostrarán aquí.</p>
+            </div>
+
+
+
+            <div id="after-sort">
+
+            </div>
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="module" src="./src/controllers/Scripts.js"></script>
+
+</body>
+
+</html>
